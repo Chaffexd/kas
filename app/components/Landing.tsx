@@ -1,4 +1,6 @@
+"use client"
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const LandingSection = () => {
   const imageStyles = [
@@ -10,9 +12,9 @@ const LandingSection = () => {
 
   return (
     <section className="w-full h-screen p-8">
-      <div className="h-5/6 w-auto mb-24 grid grid-cols-1 sm:grid-cols-2 gap-2">
+      <div className="h-5/6 w-11/12 m-auto mb-24 grid grid-cols-1 sm:grid-cols-2 gap-2">
         {imageStyles.map((style, index) => (
-          <div key={index} className={`bg-gray-300 ${style.width} ${style.height} ${style.radius} relative`}>
+          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} key={index} className={`bg-gray-300 ${style.width} ${style.height} ${style.radius} relative`}>
             <Image
               src={style.source}
               alt="Nails"
@@ -20,10 +22,10 @@ const LandingSection = () => {
               objectFit="cover"
               className={style.radius}
             />
-          </div>
+          </motion.div>
         ))}
       </div>
-      <div className="mt-4 h-44">
+      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="mt-4 h-44">
         <h3 className="text-rose-500 font-bold text-4xl mb-4">Information / Location</h3>
         <p className="text-rose-500 text-xl">
           At Kas, we pride ourselves on offering an exclusive, appointment-only
@@ -35,7 +37,7 @@ const LandingSection = () => {
           yourself in the unique charm and precision of Kas, where exceptional
           nail care meets unparalleled convenience.
         </p>
-      </div>
+      </motion.div>
     </section>
   );
 };

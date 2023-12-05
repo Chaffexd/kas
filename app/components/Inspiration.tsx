@@ -1,7 +1,7 @@
 const Inspiration = () => {
   return (
     <section className="w-full p-8">
-      <div className="h-28">
+      <div className="h-96">
         <h5 className="text-4xl text-rose-400 font-bold mb-4">Inspiration</h5>
         <p className="text-rose-400 text-xl">
           Experience the artistry of nail design like never before at our salon.

@@ -1,6 +1,6 @@
 const Styles = () => {
     return (
-      <section className="w-full bg-rose-300 mt-56">
+      <section className="w-full bg-rose-300 mt-44">
         <div className="p-8 h-auto">
           <h4 className="text-4xl font-bold mb-4 text-rose-700">Styles</h4>
           <ul className="list-disc pl-4">

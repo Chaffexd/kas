@@ -5,7 +5,7 @@ type BurgerProps = {
 const Hamburger = ({ toggleBurger }: BurgerProps) => {
   
 
-  return <button className="font-bold" onClick={toggleBurger}>☰</button>;
+  return <button className="font-bold w-6 " onClick={toggleBurger}>☰</button>;
 };
 
 export default Hamburger;

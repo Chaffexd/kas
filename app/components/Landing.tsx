@@ -1,7 +1,28 @@
+import Image from "next/image";
+
 const LandingSection = () => {
+  const imageStyles = [
+    { width: 'max-w-full', height: 'sm:h-auto h-96', source: "/assets/IMG_2244.webp", radius: 'rounded-lg' },
+    { width: 'max-w-full', height: 'sm:h-auto h-96', source: "/assets/IMG_2305.webp", radius: 'rounded-lg' },
+    { width: 'max-w-full', height: 'sm:h-auto h-96', source: "/assets/IMG_2476.webp", radius: 'rounded-lg' },
+    { width: 'max-w-full', height: 'sm:h-auto h-96', source: "/assets/IMG_5391.webp", radius: 'rounded-lg' },
+  ];
+
   return (
     <section className="w-full h-screen p-8">
-      <div className="bg-rose-500 h-5/6 mb-12">Image container</div>
+      <div className="h-5/6 w-auto mb-24 grid grid-cols-1 sm:grid-cols-2 gap-2">
+        {imageStyles.map((style, index) => (
+          <div key={index} className={`bg-gray-300 ${style.width} ${style.height} ${style.radius} relative`}>
+            <Image
+              src={style.source}
+              alt="Nails"
+              fill
+              objectFit="cover"
+              className={style.radius}
+            />
+          </div>
+        ))}
+      </div>
       <div className="mt-4 h-44">
         <h3 className="text-rose-500 font-bold text-4xl mb-4">Information / Location</h3>
         <p className="text-rose-500 text-xl">
